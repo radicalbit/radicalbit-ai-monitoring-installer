@@ -41,7 +41,6 @@ def down(clean: bool, dir: str, verbose: bool = False):
 
     click.echo("Stopping radicalbit-ai-monitoring...")
 
-    
     if clean and click.confirm(
         "Are you sure you want to clear the environment?", abort=False
     ):

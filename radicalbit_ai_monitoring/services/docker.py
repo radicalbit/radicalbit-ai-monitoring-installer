@@ -13,6 +13,7 @@ import click
 
 from yaspin import yaspin
 
+
 class DockerUtil:
     def __init__(self, dir: str) -> None:
         self.dir = dir
@@ -74,15 +75,18 @@ class DockerUtil:
     def run_docker_compose_down(self, *args, verbose: bool = False) -> None:
         with yaspin(text="Stopping the app", color="blue") as spinner:
             p = subprocess.Popen(
-                ["docker", "compose", "down", *args], cwd=path.abspath(self.dir),
-                stdout = None if verbose else subprocess.DEVNULL,
-                stderr = None if verbose else subprocess.DEVNULL
+                ["docker", "compose", "down", *args],
+                cwd=path.abspath(self.dir),
+                stdout=None if verbose else subprocess.DEVNULL,
+                stderr=None if verbose else subprocess.DEVNULL,
             )
             p.wait()
 
             if p.returncode != 0:
                 spinner.fail("💥")
-                click.echo(f"\nError while stopping containers:\n{p.stderr.read().decode()}")
+                click.echo(
+                    f"\nError while stopping containers:\n{p.stderr.read().decode()}"
+                )
                 sys.exit(1)
 
             spinner.ok("✔")
@@ -117,11 +121,11 @@ class DockerUtil:
                 cwd=path.abspath(self.dir),
             )
             while pull_status_proc.poll() is None:
-                sleep(.5)
+                sleep(0.5)
 
             if pull_status_proc.returncode != 0:
                 spinner.fail("💥")
-                click.echo(f"\nError while pulling images")
+                click.echo("\nError while pulling images")
                 sys.exit(1)
 
             spinner.ok("✔")

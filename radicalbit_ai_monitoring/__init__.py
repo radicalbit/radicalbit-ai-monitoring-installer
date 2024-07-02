@@ -1,7 +1,5 @@
 import os.path as path
 import radicalbit_ai_monitoring
-import requests
-from functools import lru_cache
 
 
 # x-release-please-start-version
