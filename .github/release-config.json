@@ -1,0 +1,11 @@
+{
+    "release-type": "simple",
+    "packages": {
+      ".": {
+        "extra-files": [
+          "pyproject.toml",
+          "radicalbit_ai_monitoring/__init__.py"
+        ]
+      }
+    }
+}
