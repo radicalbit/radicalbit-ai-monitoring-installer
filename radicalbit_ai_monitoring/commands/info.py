@@ -11,4 +11,4 @@ def info():
     click.echo(message)
     click.echo(f"CLI Version: {CLI_VERSION}")
     click.echo("Author: https://github.com/radicalbit")
-    click.echo(f"AI Monitoring GitHub: {OSS_REPO}")
+    click.echo(f"Radicalbit AI Monitoring GitHub: {OSS_REPO}")
