@@ -3,7 +3,7 @@ import radicalbit_ai_monitoring
 
 
 # x-release-please-start-version
-CLI_VERSION = "0.0.1"
+CLI_VERSION = "0.5.0"
 # x-release-please-end
 MODULE_PATH = path.abspath(path.dirname(radicalbit_ai_monitoring.__file__))
 
