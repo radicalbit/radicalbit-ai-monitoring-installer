@@ -26,12 +26,12 @@ Just run `pip install radicalbit-ai-monitoring`.
 
 If you use poetry to install the project, be sure to activate the shell environment with `poetry shell`.
 
-You can use `radicalbit_ai_monitoring <command> --help` to get info about the command.
+You can use `rbit-ai-monitoring <command> --help` to get info about the command.
 
 ### Commands
 
-- `radicalbit_ai_monitoring platform install`: install the radicalbit AI Monitoring Platform on the local machine.
-- `radicalbit_ai_monitoring platform uninstall`: uninstall the radicalbit AI Monitoring Platform from the local machine.
-- `radicalbit_ai_monitoring platform down`: stop the execution of the application.
-- `radicalbit_ai_monitoring platform up`: start the execution of the application.
-- `radicalbit_ai_monitoring info`: show info about Radicalbit AI.
+- `rbit-ai-monitoring platform install`: install the radicalbit AI Monitoring Platform on the local machine.
+- `rbit-ai-monitoring platform uninstall`: uninstall the radicalbit AI Monitoring Platform from the local machine.
+- `rbit-ai-monitoring platform down`: stop the execution of the application.
+- `rbit-ai-monitoring platform up`: start the execution of the application.
+- `rbit-ai-monitoring info`: show info about Radicalbit AI.
