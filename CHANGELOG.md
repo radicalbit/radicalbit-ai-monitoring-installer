@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.1](https://github.com/radicalbit/radicalbit-ai-monitoring-installer/compare/v0.5.0...v0.5.1) (2024-07-04)
+
+
+### Bug Fixes
+
+* **readme:** fixed cli in readme ([691f924](https://github.com/radicalbit/radicalbit-ai-monitoring-installer/commit/691f92491812b4d0d065d96c9a5a567b45919afd))
+
 ## 0.5.0 (2024-07-04)
 
 ### Features
