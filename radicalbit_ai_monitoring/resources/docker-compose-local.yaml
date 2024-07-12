@@ -97,7 +97,7 @@ services:
       "
 
   init-data:
-    image: postgres:latest
+    image: postgres:15.7-alpine
     depends_on:
       migrations:
         condition: service_completed_successfully
@@ -114,7 +114,7 @@ services:
       "
 
   minio-mirror:
-    image: minio/mc
+    image: minio/mc:latest
     depends_on:
       minio:
         condition: service_healthy

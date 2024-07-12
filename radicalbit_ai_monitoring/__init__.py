@@ -17,6 +17,8 @@ EXTERNAL_IMAGES = {
     "postgres": "postgres:15.7-alpine",
     "minio": "minio/minio:latest",
     "createbuckets": "minio/mc:latest",
+    "init-data": "postgres:15.7-alpine",
+    "minio-mirror": "minio/minio:latest",
     "k3s": "rancher/k3s:v1.30.1-k3s1",
 }
 
