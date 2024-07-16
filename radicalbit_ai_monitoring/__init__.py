@@ -29,6 +29,6 @@ DEFAULT_VERSION = "latest"
 OSS_REPO = "https://github.com/radicalbit/radicalbit-ai-monitoring"
 OSS_REPO_API = "https://api.github.com/repos/radicalbit/radicalbit-ai-monitoring"
 
-AVAILABLE_VERSIONS = ["latest", "v0.8.2"]
+AVAILABLE_VERSIONS = ["latest", "v0.9.0", "v0.8.2"]
 
 RADICALBIT_FIGLET = "Radicalbit AI Monitoring"
