@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.7.0](https://github.com/radicalbit/radicalbit-ai-monitoring-installer/compare/v0.6.0...v0.7.0) (2024-08-06)
+
+
+### Features
+
+* support for AI Platform version 1.0.0 ([05d1d8c](https://github.com/radicalbit/radicalbit-ai-monitoring-installer/commit/05d1d8c09bb308b0e0fb42857c639845def3657f))
+* update demo data ([46ac618](https://github.com/radicalbit/radicalbit-ai-monitoring-installer/commit/46ac618308437805e054c784fb28630a5eee44df))
+
 ## [0.6.0](https://github.com/radicalbit/radicalbit-ai-monitoring-installer/compare/v0.5.1...v0.6.0) (2024-07-16)
 
 
