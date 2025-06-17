@@ -19,6 +19,12 @@ services:
       DB_USER: "postgres"
       DB_PWD: "postgres"
       DB_NAME: "radicalbit"
+      CLICKHOUSE_DB_HOST: "clickhouse"
+      CLICKHOUSE_DB_PORT: 9000
+      CLICKHOUSE_DB_USER: "default"
+      CLICKHOUSE_DB_PWD: "default"
+      CLICKHOUSE_DB_NAME: "default"
+      CLICKHOUSE_DB_SCHEMA: "default"
       AWS_ACCESS_KEY_ID: "minio"
       AWS_SECRET_ACCESS_KEY: "minio123"
       AWS_REGION: "us-east-1"
@@ -27,6 +33,8 @@ services:
       KUBECONFIG_FILE_PATH: "/opt/kubeconfig/kubeconfig.yaml"
     depends_on:
       postgres:
+        condition: service_healthy
+      clickhouse:
         condition: service_healthy
       migrations:
         condition: service_completed_successfully
@@ -165,10 +173,44 @@ services:
       start_period: 5s
       retries: 2
 
+  clickhouse:
+    image: clickhouse/clickhouse-server:latest
+    container_name: clickhouse
+    ports:
+      - "8123:8123"  # HTTP interface
+      - "9002:9000"  # Native client
+    healthcheck:
+      test: [ "CMD", "clickhouse-client", "--host", "localhost" ]
+      interval: 5s
+      retries: 5
+      start_period: 5s
+      timeout: 5s
+    environment:
+      - CLICKHOUSE_USER=default
+      - CLICKHOUSE_PASSWORD=default
+    volumes:
+      - rbit-clickhouse_data:/var/lib/clickhouse
+
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:latest
+    container_name: otel-collector
+    restart: always
+    command: [ "--config", "/etc/otel-collector-config.yaml" ]
+    volumes:
+      - ./docker/otel-collector/otel-collector-config.yaml:/etc/otel-collector-config.yaml:ro
+    ports:
+      - "4317:4317"
+      - "4318:4318"
+    depends_on:
+      clickhouse:
+        condition: service_healthy
+
 volumes:
   rbit-k3s-server: {}
   rbit-data: {}
   rbit-minio_storage: {}
+  rbit-clickhouse_data: {}
+
 networks:
   default:
     ipam:

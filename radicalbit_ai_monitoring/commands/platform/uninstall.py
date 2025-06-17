@@ -11,7 +11,7 @@ import sys
 @click.option(
     "--dir",
     "-d",
-    default=f"{Path.home()}/radicalbit-ai-monitoring",
+    default=f"{Path.home()}/rbit-ai-monitoring",
     help="Path of the installation",
     show_default=True,
 )
