@@ -11,7 +11,7 @@ from pathlib import Path
 @click.option(
     "--dir",
     "-d",
-    default=f"{Path.home()}/radicalbit-ai-monitoring",
+    default=f"{Path.home()}/rbit-ai-monitoring",
     help="The name of the directory to create",
     show_default=True,
 )
