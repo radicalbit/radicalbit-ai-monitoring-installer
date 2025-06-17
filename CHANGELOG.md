@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.11.0](https://github.com/radicalbit/radicalbit-ai-monitoring-installer/compare/v0.10.0...v0.11.0) (2025-06-17)
+
+
+### Features
+
+* update platform version and demo data ([#16](https://github.com/radicalbit/radicalbit-ai-monitoring-installer/issues/16)) ([9e8f3c3](https://github.com/radicalbit/radicalbit-ai-monitoring-installer/commit/9e8f3c38680663ee3d3dd2e157595951a43cd75f))
+
 ## [0.10.0](https://github.com/radicalbit/radicalbit-ai-monitoring-installer/compare/v0.9.0...v0.10.0) (2024-12-10)
 
 
